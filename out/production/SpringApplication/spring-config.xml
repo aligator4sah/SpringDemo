@@ -19,4 +19,27 @@
         <constructor-arg value="Sam JohnSon"></constructor-arg>
         <constructor-arg ref="addressbean"></constructor-arg>
     </bean>
+
+    <bean id="ans1" class="Answers">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="3-5 hours"></constructor-arg>
+        <constructor-arg value="Ravi"></constructor-arg>
+    </bean>
+
+    <bean id="ans2" class="Answers">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="5-8 hours"></constructor-arg>
+        <constructor-arg value="John"></constructor-arg>
+    </bean>
+
+    <bean id="questionbean" class="Question">
+        <constructor-arg value="1" type="int"></constructor-arg>
+        <constructor-arg value="How many hours do you sleep per day?"></constructor-arg>
+        <constructor-arg>
+            <list>
+               <ref bean="ans1"></ref>
+                <ref bean="ans2"></ref>
+            </list>
+        </constructor-arg>
+    </bean>
 </beans>

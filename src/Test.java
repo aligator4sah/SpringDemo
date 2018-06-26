@@ -9,7 +9,9 @@ public class Test {
         BeanFactory factory = new XmlBeanFactory(resource);
         Student student = (Student)factory.getBean("studentbean");
         Employee employee = (Employee)factory.getBean("employeebean");
+        Question question = (Question)factory.getBean("questionbean");
         student.displayInfo();
         employee.show();
+        question.displayInfo();
     }
 }
