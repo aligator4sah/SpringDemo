@@ -10,6 +10,8 @@ public class Test {
         Student student = (Student)factory.getBean("studentbean");
         Employee employee = (Employee)factory.getBean("employeebean");
         Question question = (Question)factory.getBean("questionbean");
+        Printable p = (Printable)factory.getBean("print");
+        p.print();
         student.displayInfo();
         employee.show();
         question.displayInfo();

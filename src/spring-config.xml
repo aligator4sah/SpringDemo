@@ -9,9 +9,9 @@
     </bean>
 
     <bean id="addressbean" class="Address">
-        <constructor-arg value="Pittsburgh"></constructor-arg>
-        <constructor-arg value="Pennsylvania"></constructor-arg>
-        <constructor-arg value="US"></constructor-arg>
+        <property name="City" value="pittsburgh"></property>
+        <property name="state" value="Pennsylvania"></property>
+        <property name="country" value="US"></property>
     </bean>
 
     <bean id="employeebean" class="Employee">
@@ -41,5 +41,15 @@
                 <ref bean="ans2"></ref>
             </list>
         </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="1" value="heavy"></entry>
+                <entry key="2" value="middle"></entry>
+                <entry key="3" value="light"></entry>
+            </map>
+        </constructor-arg>
     </bean>
+
+    <bean id="pFactory" class="PrintableFactory"></bean>
+    <bean id="print" class="PrintableFactory" factory-method="getPrintable" factory-bean="pFactory"></bean>
 </beans>
